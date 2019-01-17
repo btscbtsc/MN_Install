@@ -2,7 +2,7 @@
 
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='BTSCOIN.conf'
-CONFIGFOLDER='/root/.BTSCcoin'
+CONFIGFOLDER='/root/.BTSCOIN'
 COIN_DAEMON='btscoind'
 COIN_CLI='btscoin-cli'
 COIN_PATH='/usr/local/bin/'
