@@ -6,10 +6,10 @@ CONFIGFOLDER='/root/.BTSCOIN'
 COIN_DAEMON='btscoind'
 COIN_CLI='btscoin-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='http://144.202.82.179/Linux.zip'
+COIN_TGZ='https://github.com/btscbtsc/BTSCOIN/releases/download/3.0.0.1/BTSC_LINUX.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='BTSCOIN'
-COIN_EXPLORER='http://66.42.72.101'
+COIN_EXPLORER='http://66.42.72.101:8000'
 COIN_PORT=31229
 RPC_PORT=31230
 
@@ -150,7 +150,7 @@ clear
 function update_config() {
   sed -i 's/daemon=1/daemon=0/' $CONFIGFOLDER/$CONFIG_FILE
   cat << EOF >> $CONFIGFOLDER/$CONFIG_FILE
-maxconnections=256
+maxconnections=2048
 bind=$NODEIP
 masternode=1
 masternodeaddr=$NODEIP:$COIN_PORT
